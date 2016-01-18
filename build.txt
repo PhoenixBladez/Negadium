@@ -1,0 +1,3 @@
+﻿author = miniek and Charon
+version = v0.1
+displayName = Mharadium & Negativity
