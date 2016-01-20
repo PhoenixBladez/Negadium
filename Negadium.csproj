@@ -1,21 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProductVersion>8.0.30703</ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{276A78FA-1A3A-4777-8B84-0DC6A90D9766}</ProjectGuid>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F451B194-820F-4B58-958F-0FC1E07049B3}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Negadium</RootNamespace>
     <AssemblyName>Negadium</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
-    <PlatformTarget>x86</PlatformTarget>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,8 +23,8 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
-    <PlatformTarget>x86</PlatformTarget>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -34,254 +33,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Content Include="Buffs\HydraHeadMinionBuff.png" />
-    <Content Include="Buffs\MharadiumBatMinionBuff.png" />
-    <Content Include="build.txt" />
-    <Content Include="Dusts\Flame.png" />
-    <Content Include="Info\Todo.txt" />
-    <Content Include="Info\UpdateLog.txt" />
-    <Content Include="Items\Accessories\CharonsWings.png" />
-    <Content Include="Items\Accessories\CharonsWings_Wings.png" />
-    <Content Include="Items\Accessories\MinieksWings.png" />
-    <Content Include="Items\Accessories\MharadiumBoots.png" />
-    <Content Include="Items\Accessories\MharadiumEmblem.png" />
-    <Content Include="Items\Accessories\MharadiumHealthBand.png" />
-    <Content Include="Items\Accessories\MharadiumMagicBall.png" />
-    <Content Include="Items\Accessories\MharadiumShield.png" />
-    <Content Include="Items\Accessories\MharadiumSuperPowers.png" />
-    <Content Include="Items\Accessories\MinieksWings_Wings.png" />
-    <Content Include="Items\Accessories\SatansSpell.png" />
-    <Content Include="Items\Mharadium\Armor\MharadiumBreastplate.png" />
-    <Content Include="Items\Mharadium\Armor\MharadiumBreastplate_Arms.png" />
-    <Content Include="Items\Mharadium\Armor\MharadiumBreastplate_Body.png" />
-    <Content Include="Items\Mharadium\Armor\MharadiumBreastplate_FemaleBody.png" />
-    <Content Include="Items\Mharadium\Armor\MharadiumHelmet.png" />
-    <Content Include="Items\Mharadium\Armor\MharadiumHelmet_Head.png" />
-    <Content Include="Items\Mharadium\Armor\MharadiumLeggings.png" />
-    <Content Include="Items\Mharadium\Armor\MharadiumLeggings_Legs.png" />
-    <Content Include="Items\Mharadium\Armor\MharadiumMask.png" />
-    <Content Include="Items\Mharadium\Armor\MharadiumMask_Head.png" />
-    <Content Include="Items\Accessories\MharadiumRocketPack.png" />
-    <Content Include="Items\Accessories\MharadiumRocketPack_Arms.png" />
-    <Content Include="Items\Accessories\MharadiumRocketPack_Body.png" />
-    <Content Include="Items\Accessories\MharadiumRocketPack_FemaleBody.png" />
-    <Content Include="Items\Armor\Negativity\PutrefactionBoots.png" />
-    <Content Include="Items\Armor\Negativity\PutrefactionBoots_Legs.png" />
-    <Content Include="Items\Armor\Negativity\PutrefactionCore.png" />
-    <Content Include="Items\Armor\Negativity\PutrefactionCore_Arms.png" />
-    <Content Include="Items\Armor\Negativity\PutrefactionCore_Body.png" />
-    <Content Include="Items\Armor\Negativity\PutrefactionCore_FemaleBody.png" />
-    <Content Include="Items\Armor\Negativity\PutrefactionHood.png" />
-    <Content Include="Items\Armor\Negativity\PutrefactionHood_Head.png" />
-    <Content Include="Items\Consumables\MharadiumArrowQuiver.png" />
-    <Content Include="Items\Consumables\FollowingMharadiumBulletPouch.png" />
-    <Content Include="Items\Consumables\PiercingMharadiumBulletPouch.png" />
-    <Content Include="Items\Consumables\SatansServantSummon.png" />
-    <Content Include="Items\Consumables\SuspiciousLookingGuitar.png" />
-    <Content Include="Items\Consumables\WaterDroplet.png" />
-    <Content Include="Items\Consumables\WickedGel.png" />
-    <Content Include="Items\MharadiumHook.png" />
-    <Content Include="Items\Mharadium\Armor\MinieksHood.png" />
-    <Content Include="Items\Mharadium\Armor\MinieksHood_Head.png" />
-    <Content Include="Items\Mharadium\Armor\MinieksLeggings.png" />
-    <Content Include="Items\Mharadium\Armor\MinieksLeggings_Legs.png" />
-    <Content Include="Items\Mharadium\Armor\MinieksRobes.png" />
-    <Content Include="Items\Mharadium\Armor\MinieksRobes_Arms.png" />
-    <Content Include="Items\Mharadium\Armor\MinieksRobes_Body.png" />
-    <Content Include="Items\Mharadium\Armor\MinieksRobes_FemaleBody.png" />
-    <Content Include="Items\Misc\DemonEgg.png" />
-    <Content Include="Items\Misc\DemonFetus.png" />
-    <Content Include="Items\Misc\DevilmiteShard.png" />
-    <Content Include="Items\Misc\MharadiumBar.png" />
-    <Content Include="Items\Placeable\GalactaAltar.png" />
-    <Content Include="Items\Weapons\HydraHeadStaff.png" />
-    <Content Include="NPCs\Mharadium\SerpentBody.png" />
-    <Content Include="NPCs\Mharadium\SerpentTail.png" />
-    <Content Include="Items\Weapons\MharadiumBatStaff.png" />
-    <Content Include="NPCs\Negativity\HydraShadow.png" />
-    <Content Include="Projectiles\MharadiumInferno_Friendly.png" />
-    <Content Include="Projectiles\Summoner\HydraHeadMinion.png" />
-    <Content Include="Projectiles\Summoner\HydraHeadMinion_Neck.png" />
-    <Content Include="Projectiles\Summoner\MharadiumBatMinion.png" />
-    <Content Include="Sounds\BossMusic\OrionSlime.wav" />
-    <Content Include="Tiles\GalactaAltar.png" />
-    <Content Include="Items\Placeable\Incubator.png" />
-    <Content Include="Items\Placeable\MharadiumAnvil.png" />
-    <Content Include="Items\Placeable\MharadiumBrick.png" />
-    <Content Include="Items\Placeable\MharadiumDoor.png" />
-    <Content Include="Items\Placeable\MharadiumForge.png" />
-    <Content Include="Items\Placeable\MharadiumOre.png" />
-    <Content Include="Items\Placeable\MharadiumWall.png" />
-    <Content Include="Items\Placeable\MharadiumWorkbench.png" />
-    <Content Include="Items\Weapons\MharadiumRocketII.png" />
-    <Content Include="Items\Weapons\FollowingMharadiumBullet.png" />
-    <Content Include="Items\Weapons\MharadiumArrow.png" />
-    <Content Include="Items\Weapons\MharadiumBow.png" />
-    <Content Include="Items\Weapons\MharadiumFlail.png" />
-    <Content Include="Items\Weapons\MharadiumMultitool.png" />
-    <Content Include="Items\Weapons\MharadiumRocketI.png" />
-    <Content Include="Items\Weapons\MharadiumRocketLauncher.png" />
-    <Content Include="Items\Weapons\MharadiumStaff.png" />
-    <Content Include="Items\Weapons\MharadiumYoyo.png" />
-    <Content Include="Items\Weapons\PiercingMharadiumBullet.png" />
-    <Content Include="Items\Weapons\MharadiumSpear.png" />
-    <Content Include="Items\Weapons\MharadiumTome.png" />
-    <Content Include="Items\Weapons\MharadiumBlaster.png" />
-    <Content Include="Items\Accessories\MharadiumWings.png" />
-    <Content Include="Items\Weapons\MharadiumSword.png" />
-    <Content Include="Items\Weapons\MMG.png" />
-    <Content Include="Items\BulletPouch.png" />
-    <Content Include="Items\Accessories\MharadiumWings_Wings.png" />
-    <Content Include="NPCs\Mharadium\SerpentHead.png" />
-    <Content Include="NPCs\Negativity\HydraBody.png" />
-    <Content Include="NPCs\Negativity\HydraHead_Neck.png" />
-    <Content Include="NPCs\Mharadium\OrionSlime.png" />
-    <Content Include="NPCs\Mharadium\OrionSlime_Egg.png" />
-    <Content Include="NPCs\Mharadium\SatansServant.png" />
-    <Content Include="NPCs\Mharadium\Thrasher.png" />
-    <Content Include="NPCs\Negativity\HydraHead.png" />
-    <Content Include="Projectiles\MharadiumRocketII.png" />
-    <Content Include="Projectiles\DevilsJavelin.png" />
-    <Content Include="Projectiles\DevilsSphere.png" />
-    <Content Include="Projectiles\DevilsBeam.png" />
-    <Content Include="Projectiles\Hooks\MharadiumHook.png" />
-    <Content Include="Projectiles\Hooks\MharadiumHook_Chain.png" />
-    <Content Include="Projectiles\FollowingMharadiumBullet.png" />
-    <Content Include="Projectiles\MharadiumArrow.png" />
-    <Content Include="Projectiles\MharadiumBall.png" />
-    <Content Include="Projectiles\MharadiumMagic.png" />
-    <Content Include="Projectiles\MharadiumRocketI.png" />
-    <Content Include="Projectiles\PiercingMharadiumBullet.png" />
-    <Content Include="Projectiles\MharadiumInferno.png" />
-    <Content Include="Projectiles\MharadiumSpear.png" />
-    <Content Include="Projectiles\MharadiumYoyo.png" />
-    <Content Include="Projectiles\MharadiumLaser.png" />
-    <Content Include="Projectiles\MharadiumDeathray.png" />
-    <Content Include="Tiles\Incubator.png" />
-    <Content Include="Tiles\MharadiumAnvil.png" />
-    <Content Include="Tiles\MharadiumBrick.png" />
-    <Content Include="Tiles\MharadiumDoorClosed.png" />
-    <Content Include="Tiles\MharadiumDoorOpen.png" />
-    <Content Include="Tiles\MharadiumForge.png" />
-    <Content Include="Tiles\MharadiumOre.png" />
-    <Content Include="Tiles\MharadiumWorkbench.png" />
-    <Content Include="Walls\MharadiumWall.png" />
+    <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Reference Include="Microsoft.Xna.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86" />
-    <Reference Include="Microsoft.Xna.Framework.Graphics, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86" />
-    <Reference Include="System" />
-    <Reference Include="Terraria">
-      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Terraria\Terraria.exe</HintPath>
-    </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Buffs\HydraHeadMinionBuff.cs" />
-    <Compile Include="Buffs\MharadiumBatMinionBuff.cs" />
-    <Compile Include="Dusts\Flame.cs" />
-    <Compile Include="Items\Accessories\CharonsWings.cs" />
-    <Compile Include="Items\Accessories\MharadiumBoots.cs" />
-    <Compile Include="Items\Accessories\MharadiumEmblem.cs" />
-    <Compile Include="Items\Accessories\MharadiumHealthBand.cs" />
-    <Compile Include="Items\Accessories\MharadiumMagicBall.cs" />
-    <Compile Include="Items\Accessories\MharadiumShield.cs" />
-    <Compile Include="Items\Accessories\MharadiumSuperPowers.cs" />
-    <Compile Include="Items\Accessories\MinieksWings.cs" />
-    <Compile Include="Items\Mharadium\Armor\MharadiumBreastplate.cs" />
-    <Compile Include="Items\Mharadium\Armor\MharadiumHelmet.cs" />
-    <Compile Include="Items\Mharadium\Armor\MharadiumLeggings.cs" />
-    <Compile Include="Items\Mharadium\Armor\MharadiumMask.cs" />
-    <Compile Include="Items\Accessories\MharadiumRocketPack.cs" />
-    <Compile Include="Items\Armor\Negativity\PutrefactionBoots.cs" />
-    <Compile Include="Items\Armor\Negativity\PutrefactionCore.cs" />
-    <Compile Include="Items\Armor\Negativity\PutrefactionHood.cs" />
-    <Compile Include="Items\BulletPouch.cs" />
-    <Compile Include="Items\Consumables\MharadiumArrowQuiver.cs" />
-    <Compile Include="Items\Consumables\FollowingMharadiumBulletPouch.cs" />
-    <Compile Include="Items\Consumables\PiercingMharadiumBulletPouch.cs" />
-    <Compile Include="Items\Consumables\SatansServantSummon.cs" />
-    <Compile Include="Items\Consumables\SuspiciousLookingGuitar.cs" />
-    <Compile Include="Items\Consumables\WaterDroplet.cs" />
-    <Compile Include="Items\Consumables\WickedGel.cs" />
-    <Compile Include="Items\Mharadium\Armor\MinieksHood.cs" />
-    <Compile Include="Items\Mharadium\Armor\MinieksLeggings.cs" />
-    <Compile Include="Items\Mharadium\Armor\MinieksRobes.cs" />
-    <Compile Include="Items\Misc\DemonEgg.cs" />
-    <Compile Include="Items\Misc\DemonFetus.cs" />
-    <Compile Include="Items\Misc\DevilmiteShard.cs" />
-    <Compile Include="Items\Misc\MharadiumBar.cs" />
-    <Compile Include="Items\Placeable\GalactaAltar.cs" />
-    <Compile Include="Items\Placeable\Incubator.cs" />
-    <Compile Include="Items\Placeable\MharadiumAnvil.cs" />
-    <Compile Include="Items\Placeable\MharadiumBrick.cs" />
-    <Compile Include="Items\Placeable\MharadiumDoor.cs" />
-    <Compile Include="Items\Placeable\MharadiumForge.cs" />
-    <Compile Include="Items\Placeable\MharadiumOre.cs" />
-    <Compile Include="Items\Placeable\MharadiumWall.cs" />
-    <Compile Include="Items\Placeable\MharadiumWorkbench.cs" />
-    <Compile Include="Items\Weapons\HydraHeadStaff.cs" />
-    <Compile Include="Items\Weapons\FollowingMharadiumBullet.cs" />
-    <Compile Include="Items\Weapons\MharadiumArrow.cs" />
-    <Compile Include="Items\Weapons\MharadiumBatStaff.cs" />
-    <Compile Include="Items\Weapons\MharadiumBow.cs" />
-    <Compile Include="Items\Weapons\MharadiumFlail.cs" />
-    <Compile Include="Items\Weapons\MharadiumMultitool.cs" />
-    <Compile Include="Items\Weapons\MharadiumRocketI.cs" />
-    <Compile Include="Items\Weapons\MharadiumRocketII.cs" />
-    <Compile Include="Items\Weapons\MharadiumRocketLauncher.cs" />
-    <Compile Include="Items\Weapons\MharadiumSpear.cs" />
-    <Compile Include="Items\Weapons\MharadiumStaff.cs" />
-    <Compile Include="Items\Weapons\MharadiumSword.cs" />
-    <Compile Include="Items\Weapons\MharadiumTome.cs" />
-    <Compile Include="Items\Weapons\MharadiumBlaster.cs" />
-    <Compile Include="Items\MharadiumHook.cs" />
-    <Compile Include="Items\Accessories\MharadiumWings.cs" />
-    <Compile Include="Items\Weapons\MharadiumYoyo.cs" />
-    <Compile Include="Items\Weapons\MMG.cs" />
-    <Compile Include="Items\Accessories\SatansSpell.cs" />
-    <Compile Include="Items\Weapons\PiercingMharadiumBullet.cs" />
-    <Compile Include="Negadium.cs" />
-    <Compile Include="NPCs\Mharadium\SerpentBody.cs" />
-    <Compile Include="NPCs\Mharadium\SerpentHead.cs" />
-    <Compile Include="NPCs\Mharadium\SerpentTail.cs" />
-    <Compile Include="NPCs\Negativity\HydraBody.cs" />
-    <Compile Include="NPCs\Negativity\HydraHead.cs" />
-    <Compile Include="NPCs\Negativity\HydraShadow.cs" />
-    <Compile Include="NPCs\Mharadium\OrionSlime.cs" />
-    <Compile Include="NPCs\Mharadium\SatansServant.cs" />
-    <Compile Include="NPCs\Mharadium\Thrasher.cs" />
-    <Compile Include="Projectiles\MharadiumInferno_Friendly.cs" />
-    <Compile Include="Projectiles\DevilsBeam.cs" />
-    <Compile Include="Projectiles\DevilsJavelin.cs" />
-    <Compile Include="Projectiles\Hooks\MharadiumHook.cs" />
-    <Compile Include="Projectiles\FollowingMharadiumBullet.cs" />
-    <Compile Include="Projectiles\MharadiumArrow.cs" />
-    <Compile Include="Projectiles\MharadiumDeathray.cs" />
-    <Compile Include="Projectiles\MharadiumBall.cs" />
-    <Compile Include="Projectiles\MharadiumInferno.cs" />
-    <Compile Include="Projectiles\MharadiumLaser.cs" />
-    <Compile Include="Projectiles\MharadiumMagic.cs" />
-    <Compile Include="Projectiles\MharadiumRocketI.cs" />
-    <Compile Include="Projectiles\MharadiumRocketII.cs" />
-    <Compile Include="Projectiles\MharadiumSpear.cs" />
-    <Compile Include="Projectiles\MharadiumYoyo.cs" />
-    <Compile Include="Projectiles\DevilsSphere.cs" />
-    <Compile Include="Projectiles\PiercingMharadiumBullet.cs" />
-    <Compile Include="Projectiles\Summoner\HydraHeadMinion.cs" />
-    <Compile Include="Projectiles\Summoner\MharadiumBatMinion.cs" />
-    <Compile Include="Tiles\CustomGlobalTile.cs" />
-    <Compile Include="Tiles\GalactaAltar.cs" />
-    <Compile Include="Tiles\Incubator.cs" />
-    <Compile Include="Tiles\MharadiumAnvil.cs" />
-    <Compile Include="Tiles\MharadiumBrick.cs" />
-    <Compile Include="Tiles\MharadiumDoorClosed.cs" />
-    <Compile Include="Tiles\MharadiumDoorOpen.cs" />
-    <Compile Include="Tiles\MharadiumForge.cs" />
-    <Compile Include="Tiles\MharadiumOre.cs" />
-    <Compile Include="Tiles\MharadiumWorkbench.cs" />
-    <Compile Include="Walls\MharadiumWall.cs" />
-  </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
