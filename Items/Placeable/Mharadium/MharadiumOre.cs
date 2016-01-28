@@ -14,7 +14,7 @@ namespace Negadium.Items.Placeable.Mharadium
             item.name = "Mharadium Ore";
             item.width = 12;
             item.height = 12;
-            item.toolTip = "A most valuable piece of Mharadium Ore.";
+            item.toolTip = "A most valuable piece of Mharadium Ore." + Environment.NewLine + "\"Higly radioactive, highly poisonous; truly powerful.\"";
             item.value = Item.sellPrice(0, 1, 0, 0);
             item.rare = 10;
 
