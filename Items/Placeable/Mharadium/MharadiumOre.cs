@@ -4,6 +4,7 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Negadium.Buffs.Mharadium;
 
 namespace Negadium.Items.Placeable.Mharadium
 {
@@ -14,7 +15,7 @@ namespace Negadium.Items.Placeable.Mharadium
             item.name = "Mharadium Ore";
             item.width = 12;
             item.height = 12;
-            item.toolTip = "A most valuable piece of Mharadium Ore." + Environment.NewLine + "\"Higly radioactive, highly poisonous; truly powerful.\"";
+            item.toolTip = "A most valuable piece of Mharadium Ore.";
             item.value = Item.sellPrice(0, 1, 0, 0);
             item.rare = 10;
 
@@ -26,6 +27,11 @@ namespace Negadium.Items.Placeable.Mharadium
             item.useStyle = 1;
             item.consumable = true;
             item.createTile = mod.TileType("MharadiumOre");
+        }
+
+        public override void UpdateInventory(Player player)
+        {
+            player.AddBuff(mod.BuffType("Mharadium"), 2);
         }
     }
 }

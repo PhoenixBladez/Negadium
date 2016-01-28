@@ -219,7 +219,11 @@ namespace Negadium.Developer.Charon
 				}
 			}
 
-			// custom debuff here soon
+            // custom debuff here soon
+            if (Main.rand.Next(0, 100) <= 20)
+            {
+                target.AddBuff(BuffID.ShadowFlame, 5 * 60);
+            }
 		}
 
 		private static Vector2 GetVelocity(Projectile projectile)

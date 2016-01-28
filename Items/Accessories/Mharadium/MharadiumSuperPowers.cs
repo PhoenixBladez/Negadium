@@ -67,7 +67,6 @@ namespace Negadium.Items.Accessories.Mharadium
             player.thrownDamage += 0.3F;
             player.rangedDamage += 0.3F;
 
-            player.AddBuff(BuffID.WeaponImbueFire, 2);
             #endregion
             #region Magic Ball Buffs
             player.manaRegen += 2; // 200% extra mana regen.
