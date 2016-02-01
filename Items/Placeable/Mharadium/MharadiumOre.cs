@@ -4,6 +4,7 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Negadium.Buffs.Mharadium;
 
 namespace Negadium.Items.Placeable.Mharadium
 {
@@ -26,6 +27,11 @@ namespace Negadium.Items.Placeable.Mharadium
             item.useStyle = 1;
             item.consumable = true;
             item.createTile = mod.TileType("MharadiumOre");
+        }
+
+        public override void UpdateInventory(Player player)
+        {
+            player.AddBuff(mod.BuffType("Mharadium"), 2);
         }
     }
 }

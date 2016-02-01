@@ -5,7 +5,6 @@ using System.Linq;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using System.IO;
 using Microsoft.Xna.Framework.Graphics;
 
 namespace Negadium.Developer.Charon
@@ -189,7 +188,7 @@ namespace Negadium.Developer.Charon
 			int radius = 8*16 - minRadius; // pixels*tilesize - minRadius
 			int orbitSpeed = 12 - minSpeed; // pixelspeed - minSpeed
 			int sizeTexture = 12; // in pixels (size of texture)
-	​
+
 			projectile.localAI[1] += 2f * (float)Math.PI / 600f * orbitSpeed;
 			projectile.localAI[1] %= 2f * (float)Math.PI;
 
@@ -219,7 +218,11 @@ namespace Negadium.Developer.Charon
 				}
 			}
 
-			// custom debuff here soon
+            // custom debuff here soon
+            if (Main.rand.Next(0, 100) <= 20)
+            {
+                target.AddBuff(BuffID.ShadowFlame, 5 * 60);
+            }
 		}
 
 		private static Vector2 GetVelocity(Projectile projectile)

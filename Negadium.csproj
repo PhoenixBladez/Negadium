@@ -44,10 +44,18 @@
   <ItemGroup>
     <Compile Include="Buffs\HydraHeadMinionBuff.cs" />
     <Compile Include="Buffs\MharadiumBatMinionBuff.cs" />
+    <Compile Include="Buffs\Mharadium\MharadiumFire.cs" />
+    <Compile Include="Buffs\Mharadium\MharadiumSuperPowers.cs" />
     <Compile Include="Developer\Charon\AcheronDust.cs" />
     <Compile Include="Developer\Charon\AcheronYoyo.cs" />
     <Compile Include="Developer\Charon\AcheronYoyoProjectiles.cs" />
+    <Compile Include="Developer\Charon\BabyCrimera.cs" />
     <Compile Include="Developer\Charon\CharonsWings.cs" />
+    <Compile Include="Developer\Charon\CrimerasBuff.cs" />
+    <Compile Include="Developer\Charon\CrimerasChunk.cs" />
+    <Compile Include="Developer\Gorateron\ArcDust.cs" />
+    <Compile Include="Developer\Gorateron\ArcStaff.cs" />
+    <Compile Include="Developer\Gorateron\CkratWings.cs" />
     <Compile Include="Developer\Miniek\MinieksWings.cs" />
     <Compile Include="Developer\SatansSpell.cs" />
     <Compile Include="Dusts\Mharadium\Flame.cs" />
@@ -109,6 +117,7 @@
     <Compile Include="Items\Weapons\Mharadium\MharadiumYoyo.cs" />
     <Compile Include="Items\Weapons\Mharadium\MMG.cs" />
     <Compile Include="Items\Weapons\Mharadium\PiercingMharadiumBullet.cs" />
+    <Compile Include="MharadiumHandling.cs" />
     <Compile Include="Negadium.cs" />
     <Compile Include="NPCs\Mharadium\OrionSlime.cs" />
     <Compile Include="NPCs\Mharadium\SatansServant.cs" />
@@ -148,6 +157,7 @@
     <Compile Include="Tiles\Mharadium\MharadiumForge.cs" />
     <Compile Include="Tiles\Mharadium\MharadiumOre.cs" />
     <Compile Include="Tiles\Mharadium\MharadiumWorkbench.cs" />
+    <Compile Include="Tools.cs" />
     <Compile Include="Walls\Mharadium\MharadiumWall.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -158,8 +168,21 @@
     <Content Include="Developer\Charon\AcheronYoyo.png" />
     <Content Include="Developer\Charon\AcheronYoyoCircleProjectile.png" />
     <Content Include="Developer\Charon\AcheronYoyoProjectile.png" />
+    <Content Include="Developer\Charon\BabyCrimera.png" />
     <Content Include="Developer\Charon\CharonsWings.png" />
     <Content Include="Developer\Charon\CharonsWings_Wings.png" />
+    <Content Include="Developer\Charon\CrimerasBuff.png" />
+    <Content Include="Developer\Charon\CrimerasChunk.png" />
+    <Content Include="Developer\Gorateron\ArcDust.png" />
+    <Content Include="Developer\Gorateron\ArcStaff.png" />
+    <Content Include="Developer\Gorateron\CkratWings.png" />
+    <Content Include="Developer\Gorateron\CkratWings_Glow.png" />
+    <Content Include="Developer\Gorateron\CkratWings_Wings.png" />
+    <Content Include="Developer\Gorateron\FlameRing.png" />
+    <Content Include="Developer\Gorateron\FlameRing_origi.png" />
+    <Content Include="Developer\Gorateron\NegativeArc.png" />
+    <Content Include="Developer\Gorateron\NegativeArcOrb.png" />
+    <Content Include="Developer\Gorateron\SuperPowers.png" />
     <Content Include="Developer\Miniek\MinieksWings.png" />
     <Content Include="Developer\Miniek\MinieksWings_Wings.png" />
     <Content Include="Developer\SatansSpell.png" />
@@ -244,6 +267,7 @@
     <Content Include="Items\Weapons\Mharadium\MharadiumYoyo.png" />
     <Content Include="Items\Weapons\Mharadium\MMG.png" />
     <Content Include="Items\Weapons\Mharadium\PiercingMharadiumBullet.png" />
+    <Content Include="Music\titlescreen.mp3" />
     <Content Include="NPCs\Mharadium\OrionSlime.png" />
     <Content Include="NPCs\Mharadium\OrionSlime_Egg.png" />
     <Content Include="NPCs\Mharadium\SatansServant.png" />
@@ -289,12 +313,10 @@
     <Content Include="Walls\Mharadium\MharadiumWall.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Buffs\Mharadium\" />
     <Folder Include="Buffs\Negativity\" />
     <Folder Include="Developer\DeliciousSaturn\" />
     <Folder Include="Developer\Eldrazi\" />
     <Folder Include="Developer\Evilgrapez\" />
-    <Folder Include="Developer\Gorateron\" />
     <Folder Include="Developer\Percolator\" />
     <Folder Include="Dusts\Negativity\" />
     <Folder Include="Items\Accessories2\Negativity\" />
@@ -324,8 +346,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Terraria\Microsoft.Xna.Framework.Xact.dll</HintPath>
     </Reference>
+    <Reference Include="System" />
     <Reference Include="Terraria">
-      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Terraria\Terraria.exe</HintPath>
+      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Terraria\Terraria.exe</HintPath>
     </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

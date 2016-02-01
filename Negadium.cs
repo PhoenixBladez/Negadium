@@ -9,6 +9,12 @@ namespace Negadium
 {
     public class Negadium : Mod
     {
+        /*
+            A mod by:
+            Charon, Miniek, Eldrazi, Percolator, Evilgrapez, Delicioussaturn, Gorateron
+        */
+
+
         public override void SetModInfo(out string name, ref ModProperties properties)
         {
             name = "Negadium";

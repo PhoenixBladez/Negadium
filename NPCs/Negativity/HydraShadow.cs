@@ -29,6 +29,17 @@ namespace Negadium.NPCs.Negativity
             npc.soundKilled = 1;
         }
 
+        // Gora, done this because otherwise it'll fuck items that don't have penetrate = -1
+        public override bool? CanBeHitByProjectile(Projectile projectile)
+        {
+            return false;
+        }
+
+        public override bool? CanBeHitByItem(Player player, Item item)
+        {
+            return false;
+        }
+
         public override bool PreAI()
         {
             if (!Main.npc[(int)npc.ai[0]].active)

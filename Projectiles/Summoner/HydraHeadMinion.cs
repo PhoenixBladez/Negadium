@@ -35,14 +35,16 @@ namespace Negadium.Projectiles.Summoner
 
         public override bool PreAI()
         {
-            if (Main.player[Main.myPlayer].dead)
+            if (player.dead)
             {
-                Main.player[Main.myPlayer].raven = false;
+                player.raven = false;
             }
-            if (Main.player[Main.myPlayer].raven)
+            if (player.raven)
             {
                 projectile.timeLeft = 2;
             }
+
+            Lighting.AddLight(projectile.Center, new Vector3(0.729f, 0.333f, 0.827f));
 
             float num1 = 0.05F;
             float num2 = 200F;

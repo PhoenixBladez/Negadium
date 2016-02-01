@@ -33,7 +33,7 @@ namespace Negadium.Developer
         public override void UpdateEquip(Player player)
         {
             if (player.name == "Miniek" || player.name == "miniek" || player.name == "Eldrazi" || player.name == "eldrazi" || 
-                player.name == "Charon" || player.name == "charon")
+                player.name == "Charon" || player.name == "charon" || player.name == "GIMJ")
             {
                 player.meleeDamage *= 1.3F; // Increase melee damage by 30%
                 player.magicDamage *= 1.3F; // Increase magic damage by 30%

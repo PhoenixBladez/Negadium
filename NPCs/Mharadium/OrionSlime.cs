@@ -22,7 +22,7 @@ namespace Negadium.NPCs.Mharadium
             npc.name = "Orion Slime";
             npc.width = 98;
             npc.height = 92;
-            npc.damage = 10000; // Insta kill
+            npc.damage = 1; // Insta kill see ModifyHitPlayer
             Main.npcFrameCount[npc.type] = 6;
             npc.defense = 75;
             npc.lifeMax = 150000;
@@ -34,6 +34,13 @@ namespace Negadium.NPCs.Mharadium
             npc.value = 10000f;
             npc.scale = 1.25F;
             music = 13;
+        }
+
+        //Gorateron, Allows you to modify the damage, etc., that this NPC does to a player.
+        public override void ModifyHitPlayer(Player target, ref int damage, ref bool crit)
+        {
+            damage = target.statLifeMax2; // <---
+            crit = true;
         }
 
         public override void AI()
