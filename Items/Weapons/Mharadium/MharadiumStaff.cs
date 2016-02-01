@@ -1,11 +1,12 @@
 ﻿using System;
-
+using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace Negadium.Items.Weapons.Mharadium
 {
+
     public class MharadiumStaff : ModItem
     {
         public override void SetDefaults()
@@ -16,7 +17,7 @@ namespace Negadium.Items.Weapons.Mharadium
             item.mana = 20;
             item.width = 40;
             item.height = 40;
-            item.toolTip = "Only true heroes can handle its power!";
+            item.toolTip = "Shoots fiery pyro balls that have a chance to split";
             item.useTime = 20;
             item.useAnimation = 20;
             item.useStyle = 1;
@@ -28,6 +29,14 @@ namespace Negadium.Items.Weapons.Mharadium
             item.autoReuse = true;
             item.shoot = mod.ProjectileType("MharadiumInferno_Friendly");
             item.shootSpeed = 16f;
+        }
+
+        private Vector2 GetMouse(Player player)
+        {
+            Vector2 position = Main.screenPosition;
+            position.X += Main.mouseX;
+            position.Y += player.gravDir == 1 ? Main.mouseY : Main.screenHeight - Main.mouseY;
+            return position;
         }
 
         public override void AddRecipes()

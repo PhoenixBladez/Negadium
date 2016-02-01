@@ -17,7 +17,7 @@ namespace Negadium.Buffs.Mharadium
         {
             Main.buffName[Type] = "Mharadium";
             Main.buffNoTimeDisplay[Type] = true;
-            Main.buffTip[Type] = "You have a weird feeling; it may be the radioactivity.";
+            Main.buffTip[Type] = "You have a weird feeling, it may be the radioactivity";
             Main.buffNoSave[Type] = true;
             this.canBeCleared = false;
         }

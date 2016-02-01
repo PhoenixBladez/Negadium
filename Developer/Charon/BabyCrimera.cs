@@ -1,11 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Terraria;
-using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace Negadium.Developer.Charon
@@ -16,7 +11,6 @@ namespace Negadium.Developer.Charon
 
         public override void SetDefaults()
         {
-            // projectile.CloneDefaults(ProjectileID.BabyEater); // copy eater's stuff
             projectile.name = "Baby Crimera";
             projectile.width = 32; // Changed
             projectile.height = 54; // Changed
@@ -39,8 +33,8 @@ namespace Negadium.Developer.Charon
         {
             // kill pet if plr is dead
             Player player = Main.player[projectile.owner];
-            CrimerasModPlayer modPlayer = (CrimerasModPlayer)player.GetModPlayer(mod, "CrimerasModPlayer");
-            if (player.dead || player.HasBuff(mod.BuffType("CrimerasBuff")) == -1) // hasBuff returns the index where the buff is located, 0 to 22 index. a -1 if immune or not found
+            MharadiumModPlayer modPlayer = (MharadiumModPlayer)player.GetModPlayer(mod, "MharadiumModPlayer");
+            if (player.dead)
                 modPlayer.babycrimera = false;
             if (modPlayer.babycrimera)
                 projectile.timeLeft = 2;

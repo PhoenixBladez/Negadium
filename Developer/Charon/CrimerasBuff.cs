@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Terraria;
+﻿using Terraria;
 using Terraria.ModLoader;
 
 namespace Negadium.Developer.Charon
@@ -28,7 +23,7 @@ namespace Negadium.Developer.Charon
             int buffNewType = mod.ProjectileType("BabyCrimera");
 
             // we use a ModPlayer instead of player.eater (bool)
-                CrimerasModPlayer modPlayer = (CrimerasModPlayer)player.GetModPlayer(mod, "CrimerasModPlayer");
+                MharadiumModPlayer modPlayer = (MharadiumModPlayer)player.GetModPlayer(mod, "MharadiumModPlayer");
                 modPlayer.babycrimera = true;
 
             bool flag = true;
@@ -39,10 +34,5 @@ namespace Negadium.Developer.Charon
                 Projectile.NewProjectile(player.position.X + (float)(player.width / 2), player.position.Y + (float)(player.height / 2), 0.0f, 0.0f, buffNewType, 0, 0.0f, player.whoAmI, 0.0f, 0.0f);
 
         }
-    }
-
-    public class CrimerasModPlayer : ModPlayer
-    {
-        public bool babycrimera = false; // used by: CrimerasChunk, BabyCrimera
     }
 }

@@ -17,18 +17,10 @@ namespace Negadium.Developer.Charon
             item.toolTip = "Summons a baby Crimera";
             item.rare = -12;
 
-            //copied using CloneDefaults
-            //item.damage = 0;
-            //item.useStyle = 1;
             item.shoot = mod.ProjectileType("BabyCrimera"); // actual pet as a projectile
             //ProjectileID.BabyEater == 175
             item.width = 32; // changed
             item.height = 28; // changed
-            //item.useSound = 2;
-            //item.useAnimation = 20;
-            //item.useTime = 20;
-            //item.noMelee = true;
-            //item.value = 0;
             item.buffType = mod.BuffType("CrimerasBuff"); // buff granted
         }
 
@@ -37,7 +29,7 @@ namespace Negadium.Developer.Charon
             // actually add the buff thanks for Jopo on updating GH with this
             if (player.whoAmI == Main.myPlayer && player.itemTime == 0)
             {
-                player.AddBuff(item.buffType, 3600, true);
+                player.AddBuff(item.buffType, 2, true);
             }
         }
     }

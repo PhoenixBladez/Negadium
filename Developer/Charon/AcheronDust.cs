@@ -1,21 +1,15 @@
-using Microsoft.Xna.Framework;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using Terraria;
-using Terraria.ID;
 using Terraria.ModLoader;
-using System.IO;
-using Microsoft.Xna.Framework.Graphics;
 
 namespace Negadium.Developer.Charon
 {
-	public class AcheronDust : ModDust
+    public class AcheronDust : ModDust
 	{
 		/* 
 			Gorateron
 			Made for: Acheron Yoyo (Charon)
 		*/
+
 		public override void OnSpawn(Dust dust)
 		{
 			dust.noGravity = true;
